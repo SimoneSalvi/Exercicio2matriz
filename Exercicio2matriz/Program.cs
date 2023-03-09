@@ -23,8 +23,9 @@
         {
             for (int coluna = 0; coluna < 5; coluna++)
             {
-                Console.WriteLine($"Posição [{linha},{coluna}] = valor: {matriz[linha, coluna]}");
+                Console.Write($" [{matriz[linha, coluna]}]");
             }
+            Console.WriteLine("\n");
         }
 
         // Soma da diagonal principal
