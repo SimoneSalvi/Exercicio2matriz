@@ -9,7 +9,7 @@
 
         // montagem da matriz
 
-        for (int linha = 0; linha < 5; linha++)
+        for (int linha = 0; linha < matriz.GetLength(0); linha++)
         {
             for (int coluna = 0; coluna < 5; coluna++)
             {
@@ -19,9 +19,9 @@
 
         // Impressao da matriz
 
-        for (int linha = 0; linha < 5; linha++)
+        for (int linha = 0; linha < matriz.GetLength(0); linha++)
         {
-            for (int coluna = 0; coluna < 5; coluna++)
+            for (int coluna = 0; coluna < matriz.GetLength(1); coluna++)
             {
                 Console.Write($" [{matriz[linha, coluna]}]");
             }
@@ -31,9 +31,9 @@
         // Soma da diagonal principal
 
         double soma = 0;
-        for (int linha = 0;linha < 5; linha++)
+        for (int linha = 0;linha < matriz.GetLength(0); linha++)
         {
-            for(int coluna = 0;coluna < 5; coluna++)
+            for(int coluna = 0;coluna < matriz.GetLength(1); coluna++)
             {
                 if (linha == coluna)
                 soma += matriz[linha, coluna];
@@ -45,9 +45,9 @@
         // Soma da diagonal secundária
 
         soma = 0;
-        for (int linha = 0; linha < 5; linha++)
+        for (int linha = 0; linha < matriz.GetLength(0); linha++)
         {
-            for (int coluna = 0; coluna < 5; coluna++)
+            for (int coluna = 0; coluna < matriz.GetLength(1); coluna++)
             {
                 if (coluna == 4-linha)
                     soma += matriz[linha, coluna];
@@ -58,10 +58,10 @@
 
         // Soma das linhas
 
-        for(int linha = 0; linha<5; linha++)
+        for(int linha = 0; linha< matriz.GetLength(0); linha++)
         {
             soma = 0;
-            for ( int coluna = 0; coluna<5; coluna++)
+            for ( int coluna = 0; coluna< matriz.GetLength(1); coluna++)
             {
                 soma += matriz[linha, coluna];
             }
@@ -71,10 +71,10 @@
 
         // Soma das colunas
 
-        for (int coluna = 0; coluna < 5; coluna++)
+        for (int coluna = 0; coluna < matriz.GetLength(1); coluna++)
         {
             soma = 0;
-            for (int linha = 0; linha < 5; linha++)
+            for (int linha = 0; linha < matriz.GetLength(0); linha++)
             {
                 soma += matriz[linha, coluna];
             }
