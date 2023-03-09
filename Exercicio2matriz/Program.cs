@@ -49,6 +49,7 @@
         {
             for (int coluna = 0; coluna < matriz.GetLength(1); coluna++)
             {
+                //soma += matriz[linha, matriz.GetLength(1)-linha-1];
                 if (coluna == 4-linha)
                     soma += matriz[linha, coluna];
             }
